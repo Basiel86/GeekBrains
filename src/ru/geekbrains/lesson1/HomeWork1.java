@@ -13,32 +13,32 @@
          char ch = 'z';
          boolean fls = false;
 
-         System.out.println(method3(2,4,10,2));
-         System.out.println(method4(11,6));
-         method5(-7);
-         System.out.println(method6(-5));
-         method7("User");
-         method8one(1900);
-         method8one(2000);
-         method8one(2100);
-         method8two(1900);
-         method8two(2000);
-         method8two(2100);
+         System.out.println(solveEquation(2,4,10,2));
+         System.out.println(sumInTenToTwentyRange(11,6));
+         isPositive(-7);
+         System.out.println(isNegative(-5));
+         printHelloInput("User");
+         isLeapYear(1900);
+         isLeapYear(2000);
+         isLeapYear(2100);
+         isLeapYearSnd(1900);
+         isLeapYearSnd(2000);
+         isLeapYearSnd(2100);
      }
 
      // 3
-     static int method3(int a, int b, int c, int d) {
+     static float solveEquation (float a, float b, float c, float d) {
         return a * (b + (c / d));
     }
 
      //4
-     static boolean method4(int a, int b) {
+     static boolean sumInTenToTwentyRange(int a, int b) {
          int sum = a + b;
          return sum >= 10 && sum <= 20;
      }
 
      //5
-     static void method5(int a) {
+     static void isPositive(int a) {
          if (a >= 0) {
              System.out.println(a + " - положительное число");
          } else {
@@ -47,19 +47,19 @@
      }
 
      //6
-     static boolean method6(int a) {
+     static boolean isNegative(int a) {
         return a < 0;
     }
 
      //7
-     static void method7(String str) {
+     static void printHelloInput(String str) {
         System.out.println("Привет, " + str + "!");
     }
 
      //8
      // первой реализацией пошел от проверки на високосность, что привело к громоздкости, решил пойти от обратного
      // второй метод от обратного вышел 2ды короче
-     static void method8one(int year) {
+     static void isLeapYear(int year) {
 
          if (year % 4 == 0) {
              if (year % 100 == 0 && year % 400 == 0) {
@@ -72,7 +72,7 @@
          }
      }
 
-     static void method8two(int year) {
+     static void isLeapYearSnd(int year) {
 
          if (year % 4 != 0 || (year % 100 == 0 && year % 400 != 0)) {
              System.out.println(year + " год - НЕ Високосный");
